@@ -1,0 +1,217 @@
+body {
+    background: #333;
+    margin: 0;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#animate {
+    position: absolute;
+    top: 150px;
+    width: 10px;
+    left: -10px;
+    height: 553px;
+    background-color: #0078d7;
+}
+
+.tips {
+    width: 422px;
+    height: 563px;
+    background-color: #2d2d2d;
+    position: absolute;
+    left: calc(30% + 452px);
+    top: 140px;
+    display: none;
+}
+
+.tips .tips1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 172px;
+    width: 100%;
+    border-bottom: 5px solid #efefef42;
+}
+.tips .tips1 span:nth-child(1){
+    color: #efefef;
+    /* text-indent: 2em; */
+    font-size: 30px;
+}
+.tips .tips1 span:nth-child(2){
+    color: #efefef;
+    text-align: center;
+    font-size: 100px;
+}
+.tips .tips2{
+    width: 100%;
+    height: calc(100% - 172px);
+}
+.tips .tips2 table{
+    /* height: 100%; */
+    width: 100%;
+    text-align: center;
+    color: #efefef;
+    line-height: 60px;
+    font-size: 30px;
+    margin: auto 0;
+}  
+.tips .tips2 .astro{
+    display: inline-block;
+    margin-left: 10px;
+    width: 60px;
+    height: 200px;
+    text-align: center;
+    color: #e29999;
+    font-size: 60px;
+}
+/* 422*553 */
+#wrap {
+    width: 420px;
+    margin: 150px auto 0 30%;
+    border: 1px solid #444;
+    background: #2d2d2d;
+    display: none;
+    user-select: none;
+}
+
+.top {
+    position: relative;
+    padding: 20px 35px;
+    border-bottom: 1px solid #535353;
+}
+
+.top .time1 {
+    font-size: 40px;
+    color: #efefef;
+}
+
+.top .time2 {
+    font-size: 14px;
+    color: #999;
+}
+
+.top .reset {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-color: #0078d7;
+    color: #efefef;
+    top: 20px;
+    right: 30px;
+    line-height: 70px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+.date li {
+    cursor: pointer;
+}
+
+.date li:hover {
+    background-color: #809cb3;
+    transition: 0.8s;
+}
+
+.top .reset:hover {
+    background-color: #809cb3;
+    font-size: 15px;
+    transition: 0.8s;
+    text-decoration: underline;
+}
+
+.bottom {
+    padding: 20px 0;
+    color: #efefef;
+}
+
+.control {
+    display: flex;
+    /* 弹性盒模型 */
+    justify-content: space-between;
+    /* 弹性盒模型设置：内容格式-两端对齐：每个内容区中间用空隙隔开 */
+    align-items: center;
+    /* 行项目居中 */
+    height: 20px;
+    padding: 0 35px;
+    margin-bottom: 15px;
+}
+
+.control div {
+    padding-right: 5px;
+}
+
+.control div span {
+    font-size: 20px;
+    display: inline-block;
+    transform: scaleX(1.7);
+    /* 变形：横向拉伸：1.7倍 */
+    margin-left: 33px;
+    cursor: pointer;
+}
+
+.control .up:hover {
+    background-color: #0078d7;
+    transition: 0.5s;
+}
+
+.control .down:hover {
+    background-color: #0078d7;
+    transition: 0.5s;
+}
+
+.main {
+    padding: 0 20px;
+}
+
+.week {
+    display: flex;
+}
+
+.week span {
+    height: 40px;
+    flex: 1 1 auto;
+    /* 弹性盒模型设置：伸缩比例：宽高一比一，宽度自动（均分父级宽度） */
+    text-align: center;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    /* 弹性盒模型默认所有子元素处于一行中，这个设置能够允许子元素换行 */
+}
+
+.date li {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    /* 换行方式：columu */
+    /*columu flex容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同 */
+    justify-content: center;
+}
+
+.date li span:nth-child(2) {
+    font-size: 14px;
+}
+
+.date li.color {
+    color: #6e6e6e;
+}
+
+.date li.now {
+    background: #0078d7;
+}
+
+.date li.active {
+    box-sizing: border-box;
+    border: 2px solid #e65907;
+}
