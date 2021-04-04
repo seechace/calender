@@ -186,36 +186,9 @@ function bindEvents() {
 		today = moment();
 		randomDate(today);
 	})
-	var prevActive = $('.now') ;
-	$('#wrap .main ul.date').click(function(e){
-
-		if($(e.target).parent().hasClass('active')){
-			$(e.target).parent().removeClass('active');
-		}else{
-			$(e.target).parent().addClass('active');
-			
-			prevActive = $(e.target).parent();
-		}
-
-		// if($(e.target).parent().hasClass('now') || $(e.target).parent().hasClass('active')){
-		// 	// 重复点击/点击当前时间/
-		// 	return;
-		// }else{ }
-			
-		
-
-	})
 }
 bindEvents();
 
-function setTips(){
-	//设置侧边栏
-	//后续添加选择功能时应注意改动 选择器，将 now 类名改为 active
-	var nowLunar = $('.now>span:nth-child(2)').text();
-	console.log(nowLunar);
-	$('.tips .tips1 .tips-calendar').html(nowLunar);
-}
-setTips();
 
 //更新时间
 setInterval(function () {
